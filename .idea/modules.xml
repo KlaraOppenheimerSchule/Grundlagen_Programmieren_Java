@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cäsar-Verschlüsselung/Cäsar-Verschlüsselung.iml" filepath="$PROJECT_DIR$/Cäsar-Verschlüsselung/Cäsar-Verschlüsselung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kochbuch/Kochbuch.iml" filepath="$PROJECT_DIR$/Kochbuch/Kochbuch.iml" />
+    </modules>
+  </component>
+</project>
