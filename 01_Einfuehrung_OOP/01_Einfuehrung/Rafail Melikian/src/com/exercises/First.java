@@ -3,7 +3,7 @@ package com.exercises;
 import java.util.Scanner;
 
 public class First {
-    String firstNameOfUser, secondNameOfUser;
+    private String firstNameOfUser, secondNameOfUser;
 
     public void addUser() {
         Scanner scanner = new Scanner(System.in);
