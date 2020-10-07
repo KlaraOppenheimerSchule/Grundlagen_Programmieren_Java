@@ -32,7 +32,8 @@ public class First {
         First mitarbeiter1 = new First();
         mitarbeiter1.addUser();
 
-        System.out.println("First name: " + mitarbeiter1.getFirstNameOfUser() + ", Second name: " + mitarbeiter1.getSecondNameOfUser());
+        System.out.println("First name: " + mitarbeiter1.getFirstNameOfUser() +
+                ", Second name: " + mitarbeiter1.getSecondNameOfUser());
 
     }
 }
