@@ -17,7 +17,6 @@ public class First {
     public void setFirstName(String firstNameOfUser) {
         this.firstNameOfUser = firstNameOfUser;
     }
-
     public void setSecondName(String secondNameOfUser) {
         this.secondNameOfUser = secondNameOfUser;
     }
