@@ -1,11 +1,11 @@
 /**
- * HelloWorld
+ * Übungen
  */
 import java.util.Scanner;
 
-public class HelloWorld {
-    public int number;
-    public int faktorialNumber;
+public class Übungen {
+    private int number;
+    private int faktorialNumber;
 
     public int getNumber(){
         return number;
@@ -27,16 +27,14 @@ public class HelloWorld {
         if(num < 2)
             return 1;
         else{
-            int product;
-            product = num * fnFak(num-1);
-            return product;
+            return (num * fnFak(num-1));
         }
     }
 
     public static void main(String[] args){
-        HelloWorld newWorld = new HelloWorld();
-        newWorld.fnSetNumber();
-        System.out.println(newWorld.getFaktorialNumber());
+        Übungen newÜbung = new Übungen();
+        newÜbung.fnSetNumber();
+        System.out.println(newÜbung.getFaktorialNumber());
     }
     
 }
