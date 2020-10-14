@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2db15a2-818a-4858-be52-66a86034c583" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/exercises/Third.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/exercises/Third.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Second">
+  <component name="RunManager" selected="Application.Third">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.exercises.First" />
       <module name="Rafail Melikian" />
@@ -79,8 +80,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Third" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.exercises.Third" />
+      <module name="Rafail Melikian" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Third" />
         <item itemvalue="Application.Second" />
         <item itemvalue="Application.First" />
       </list>
@@ -110,25 +125,56 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1602591620575">
+    <state x="223" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602668403530">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1602591620575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1602591620575">
+    <state x="223" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1536.824@0.40.1536.824" timestamp="1602668403530" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1602671960417">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1602591620575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1602591620575">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1602671960417" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1602671960417">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1602591620575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1602591620575">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1602671960417" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1602671960417">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1602591620575" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1602671960417" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1602671960417">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1602671960417" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1602671888863">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.40.1536.824@0.40.1536.824" timestamp="1602671888863" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1602671888862">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.40.1536.824@0.40.1536.824" timestamp="1602671888862" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1602671888862">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.40.1536.824@0.40.1536.824" timestamp="1602671888862" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1602671888863">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.40.1536.824@0.40.1536.824" timestamp="1602671888863" />
     <state x="425" y="207" key="run.anything.popup" timestamp="1602507115376">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="425" y="207" key="run.anything.popup/0.40.1536.824@0.40.1536.824" timestamp="1602507115376" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/exercises/Third.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
