@@ -11,12 +11,10 @@ public class Third {
         System.out.print("IP Adress: ");
         String ipAdress = scanner.nextLine();
         String[] arrayOfIpAdress = ipAdress.split("\\.");
-        System.out.println(Arrays.toString(arrayOfIpAdress));
         int firstNumbersOfIP = Integer.parseInt(arrayOfIpAdress[0]);
         int secondNumbersOfIP = Integer.parseInt(arrayOfIpAdress[1]);
         int thirdNumbersOfIP = Integer.parseInt(arrayOfIpAdress[2]);
         int fourthNumbersOfIP = Integer.parseInt(arrayOfIpAdress[3]);
-        System.out.println(firstNumbersOfIP);
 
         int[] binaryArray = new int[4];
         int[] bytesForBinary = IntStream.of(128, 64, 32, 16).toArray();
@@ -29,19 +27,34 @@ public class Third {
                 binaryArray[i] = 0;
             }
         }
-        System.out.println(Arrays.toString(binaryArray));
 
         boolean isGueltig = true;
+        boolean isReserved = false;
+        String reasonOfReserved = "NICHT RESERVIERT.";
 
         if (binaryArray[0] == 0) {
             classNumber = "A";
             isGueltig = (secondNumbersOfIP <= 255 && thirdNumbersOfIP <= 255 && fourthNumbersOfIP <= 255);
+            if (secondNumbersOfIP == 255 && thirdNumbersOfIP == 255 && fourthNumbersOfIP == 255) {
+                isReserved = true;
+                reasonOfReserved = "Broad-cast.";
+            }
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 0) {
             classNumber = "B";
+            isGueltig = (thirdNumbersOfIP <= 255 && fourthNumbersOfIP <= 255);
+            if (thirdNumbersOfIP == 255 && fourthNumbersOfIP == 255) {
+                isReserved = true;
+                reasonOfReserved = "Broad-cast.";
+            }
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 1 && binaryArray[2] == 0) {
             classNumber = "C";
+            isGueltig = (fourthNumbersOfIP <= 255);
+            if (fourthNumbersOfIP == 255) {
+                isReserved = true;
+                reasonOfReserved = "Broad-cast.";
+            }
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 1 && binaryArray[2] == 1 && binaryArray[3] == 0) {
             classNumber = "D";
@@ -50,7 +63,8 @@ public class Third {
             classNumber = "E";
         }
 
-        System.out.println(classNumber);
+        System.out.println("Die IP-Adresse gehört zu Klasse: " + classNumber + ". Ist gültig: " + isGueltig +
+                ". Ist reserviert: " + isReserved + ". Wenn resertiert, warum: " + reasonOfReserved);
     }
 
 }
