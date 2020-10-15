@@ -13,6 +13,9 @@ public class Third {
         String[] arrayOfIpAdress = ipAdress.split("\\.");
         System.out.println(Arrays.toString(arrayOfIpAdress));
         int firstNumbersOfIP = Integer.parseInt(arrayOfIpAdress[0]);
+        int secondNumbersOfIP = Integer.parseInt(arrayOfIpAdress[1]);
+        int thirdNumbersOfIP = Integer.parseInt(arrayOfIpAdress[2]);
+        int fourthNumbersOfIP = Integer.parseInt(arrayOfIpAdress[3]);
         System.out.println(firstNumbersOfIP);
 
         int[] binaryArray = new int[4];
@@ -32,6 +35,7 @@ public class Third {
 
         if (binaryArray[0] == 0) {
             classNumber = "A";
+            isGueltig = (secondNumbersOfIP <= 255 && thirdNumbersOfIP <= 255 && fourthNumbersOfIP <= 255);
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 0) {
             classNumber = "B";
