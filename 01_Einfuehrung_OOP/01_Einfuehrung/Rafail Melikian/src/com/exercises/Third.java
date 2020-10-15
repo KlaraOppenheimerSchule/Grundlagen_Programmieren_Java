@@ -1,6 +1,5 @@
 package com.exercises;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
@@ -37,7 +36,12 @@ public class Third {
             isGueltig = (secondNumbersOfIP <= 255 && thirdNumbersOfIP <= 255 && fourthNumbersOfIP <= 255);
             if (secondNumbersOfIP == 255 && thirdNumbersOfIP == 255 && fourthNumbersOfIP == 255) {
                 isReserved = true;
+                isGueltig = false;
                 reasonOfReserved = "Broad-cast.";
+            } else if (secondNumbersOfIP == 0 && thirdNumbersOfIP == 0 && fourthNumbersOfIP == 0) {
+                isGueltig = false;
+                isReserved = true;
+                reasonOfReserved = "Netz-ID";
             }
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 0) {
@@ -45,7 +49,12 @@ public class Third {
             isGueltig = (thirdNumbersOfIP <= 255 && fourthNumbersOfIP <= 255);
             if (thirdNumbersOfIP == 255 && fourthNumbersOfIP == 255) {
                 isReserved = true;
+                isGueltig = false;
                 reasonOfReserved = "Broad-cast.";
+            } else if (thirdNumbersOfIP == 0 && fourthNumbersOfIP == 0) {
+                isGueltig = false;
+                isReserved = true;
+                reasonOfReserved = "Netz-ID";
             }
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 1 && binaryArray[2] == 0) {
@@ -53,7 +62,12 @@ public class Third {
             isGueltig = (fourthNumbersOfIP <= 255);
             if (fourthNumbersOfIP == 255) {
                 isReserved = true;
+                isGueltig = false;
                 reasonOfReserved = "Broad-cast.";
+            } else if (fourthNumbersOfIP == 0) {
+                isGueltig = false;
+                isReserved = true;
+                reasonOfReserved = "Netz-ID";
             }
         }
         else if (binaryArray[0] == 1 && binaryArray[1] == 1 && binaryArray[2] == 1 && binaryArray[3] == 0) {
