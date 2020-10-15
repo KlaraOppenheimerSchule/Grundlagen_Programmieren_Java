@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 
 public class Third {
     public static void main(String[] Args) {
-        String classNumber = "";
+        String classNumber;
         Scanner scanner = new Scanner(System.in);
         System.out.print("IP Adress: ");
         String ipAdress = scanner.nextLine();
