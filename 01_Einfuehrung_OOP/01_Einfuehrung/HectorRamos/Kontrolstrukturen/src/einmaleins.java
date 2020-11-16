@@ -1,5 +1,5 @@
 public class einmaleins {
-    public static void main(String[] args) {
+    public void zeigtTabelle(){
         int i = 0;
         int j = 0;
         while(i<10){
@@ -11,5 +11,10 @@ public class einmaleins {
             i++;
             j=0;
         }
+    }
+    public static void main(String[] args) {
+        einmaleins myClass = new einmaleins();
+        myClass.zeigtTabelle();
+       
     }
 }
