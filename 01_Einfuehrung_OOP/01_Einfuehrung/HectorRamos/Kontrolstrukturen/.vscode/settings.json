@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\junit4.5\\junit4.5\\junit-4.5.jar",
+        "c:\\junit4.5\\junit4.5\\junit-4.5-src.jar",
+        "c:\\junit4.5\\junit4.5\\junit-dep-4.5.jar"
+    ]
+}
