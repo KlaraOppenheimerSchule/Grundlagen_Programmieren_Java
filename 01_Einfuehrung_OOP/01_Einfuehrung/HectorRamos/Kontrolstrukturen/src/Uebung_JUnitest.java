@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import junit.framework.JUnit4TestAdapter;
           
-public class JUnitest {
+public class Uebung_JUnitest {
     @Before
     public void setUp(){
         
@@ -22,7 +22,7 @@ public class JUnitest {
     }
 
     public static void main(String[] args) {
-        junit.textui.TestRunner.run( new JUnit4TestAdapter(JUnitest.class) );
+        junit.textui.TestRunner.run( new JUnit4TestAdapter(Uebung_JUnitest.class) );
         
     }
 }

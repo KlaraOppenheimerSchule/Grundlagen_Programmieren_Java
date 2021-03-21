@@ -1,13 +1,13 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Ubersetzer {
+public class Uebung_Ubersetzer {
     private HashMap<Character,String> tabelle;
     private String originalSatz;
     private String newSatz;
     private Scanner scan;
 
-    private Ubersetzer(){
+    private Uebung_Ubersetzer(){
         tabelle = new HashMap<Character,String>();
         tabelle.put('A',"●➖");
         tabelle.put('B',"➖●●●");
@@ -69,7 +69,7 @@ public class Ubersetzer {
     }
 
     public static void main(String[] args) {
-        Ubersetzer morse = new Ubersetzer();
+        Uebung_Ubersetzer morse = new Uebung_Ubersetzer();
         morse.readSatz();
         morse.translateSatz();
         

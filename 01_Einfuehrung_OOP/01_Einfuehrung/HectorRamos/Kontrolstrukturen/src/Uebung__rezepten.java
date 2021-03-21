@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import junit.framework.JUnit4TestAdapter;
 
-public class rezepten {
+public class Uebung__rezepten {
     public Scanner scan;
     private boolean gesetzlichePatient = false;
     private boolean verschreibungspflichtigesArzneimittel = false;
@@ -65,6 +65,6 @@ public class rezepten {
     }
 
     public static void main(String[] args) {
-        junit.textui.TestRunner.run( new JUnit4TestAdapter(rezepten.class) );
+        junit.textui.TestRunner.run( new JUnit4TestAdapter(Uebung__rezepten.class) );
     }
 }

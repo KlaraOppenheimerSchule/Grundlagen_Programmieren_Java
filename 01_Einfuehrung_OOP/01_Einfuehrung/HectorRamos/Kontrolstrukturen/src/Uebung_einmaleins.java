@@ -1,4 +1,4 @@
-public class einmaleins {
+public class Uebung_einmaleins {
     public void zeigtTabelle(){
         int i = 0;
         int j = 0;
@@ -13,7 +13,7 @@ public class einmaleins {
         }
     }
     public static void main(String[] args) {
-        einmaleins myClass = new einmaleins();
+        Uebung_einmaleins myClass = new Uebung_einmaleins();
         myClass.zeigtTabelle();
        
     }
