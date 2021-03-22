@@ -89,21 +89,7 @@ public class Uebung_Schiffe_Versenken {
             this.visitedPositionen = new ArrayList<coordenate2D>();
             this.lives = 0;
         }
-        //von Oberklasse
-        public List<coordenate2D> getSchiffePositionen() {
-            return super.getSchiffePositionen();
-        }
-        public boolean addSchiff(coordenate2D co){
-            return super.addSchiff(co);
-        }
 
-        public void createGrid (int große){
-            super.createGrid(große);
-        }
-
-        public void showGrid (){
-            super.showGrid();
-        }
         //Besondere Funktionen
         /**
          * erzeugt ein nicht besuchte random 2D Koordenate
@@ -247,6 +233,7 @@ public class Uebung_Schiffe_Versenken {
     public Uebung_Schiffe_Versenken(){
         mySpielManager = new spielManager();
     }
+
     public static void main(String[] args) {
         Uebung_Schiffe_Versenken myGame = new Uebung_Schiffe_Versenken();
         myGame.mySpielManager.createGame(3,3,3);
