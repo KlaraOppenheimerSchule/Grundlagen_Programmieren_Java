@@ -25,7 +25,7 @@ public class Uebung_Schiffe_Versenken {
     }
 
         /***
-     * 
+     *
      */
     public class spieler{
         protected List<coordenate2D> schiffePositionen;
@@ -43,6 +43,12 @@ public class Uebung_Schiffe_Versenken {
             return schiffePositionen;
         }
         public boolean addSchiff(coordenate2D co){
+            for (coordenate2D co2D : this.schiffePositionen){
+                if(co2D.x == co.x && co2D.y == co.y ){
+                    return false;
+                }
+            }
+            schiffePositionen.add(co);
             return true;
         }
 
@@ -65,7 +71,7 @@ public class Uebung_Schiffe_Versenken {
         public spieler(){
             this.schiffePositionen = new ArrayList<coordenate2D>();
             this.visitedPositionen = new ArrayList<coordenate2D>();
-            this.lives = 3;
+            this.lives = 0;
         }
         public coordenate2D tippen(){
             return new coordenate2D();
@@ -77,19 +83,18 @@ public class Uebung_Schiffe_Versenken {
         
     }
     public class computerSpieler extends spieler{
-
+        //konstruktor
+        public computerSpieler(){
+            this.schiffePositionen = new ArrayList<coordenate2D>();
+            this.visitedPositionen = new ArrayList<coordenate2D>();
+            this.lives = 0;
+        }
+        //von Oberklasse
         public List<coordenate2D> getSchiffePositionen() {
-            return schiffePositionen;
+            return super.getSchiffePositionen();
         }
         public boolean addSchiff(coordenate2D co){
-
-            for (coordenate2D co2D : this.schiffePositionen){
-                if(co2D.x == co.x && co2D.y == co.y ){
-                    return false;
-                }
-            }
-            schiffePositionen.add(co);
-            return true;
+            return super.addSchiff(co);
         }
 
         public void createGrid (int große){
@@ -97,14 +102,12 @@ public class Uebung_Schiffe_Versenken {
         }
 
         public void showGrid (){
-            super.showGrid();;
+            super.showGrid();
         }
-
-        public computerSpieler(){
-            this.schiffePositionen = new ArrayList<coordenate2D>();
-            this.visitedPositionen = new ArrayList<coordenate2D>();
-            this.lives = 3;
-        }
+        //Besondere Funktionen
+        /**
+         * erzeugt ein nicht besuchte random 2D Koordenate
+         */
         public coordenate2D tippen(){
             Random rand = new Random();
             coordenate2D co = new coordenate2D();
@@ -122,7 +125,12 @@ public class Uebung_Schiffe_Versenken {
             this.visitedPositionen.add(co);
             return co;
         }
-
+        /****
+         * 
+         * return true, wenn keine mehr Leben mehr verfügbar sind
+         * @param co coordenate 2D (x,y)
+         * 
+         */
         public boolean tippPruefen(coordenate2D co){
             for (coordenate2D co2D : this.schiffePositionen) {
                 if(co2D.x == co.x && co2D.y == co.y ){
@@ -144,7 +152,7 @@ public class Uebung_Schiffe_Versenken {
     public class menschlicherSpieler extends spieler{}
 
     /****
-     * 
+     * Hauptklasse, die verantwortlich für die Phasen des Spiel ist
      */
     public class spielManager{
         private Scanner s;
@@ -152,8 +160,8 @@ public class Uebung_Schiffe_Versenken {
 
         private boolean gameEnded   = false;
         private int maxLives       = 0;
-        private int passiveSpieler = 0;
-        private int activSpieler   = 0;
+        private int passivSpieler = 0;
+        private int aktivSpieler   = 0;
 
         public spielManager(){
             this.spielers = new ArrayList<computerSpieler>();
@@ -161,13 +169,19 @@ public class Uebung_Schiffe_Versenken {
             this.spielers.add(new computerSpieler());
             s = new Scanner(System.in);
         }
-        
+        /**
+         * erzeug zwei Spielers mit ihrem dementsprechenden Grids und Schiffe
+         * @param gridGroße
+         * @param totalSchiffe
+         * @param lives
+         */
         public void createGame (int gridGroße, int totalSchiffe, int lives){
                 int counter;
                 int i = 0;
-                this.maxLives = lives;
+                
                 if(totalSchiffe<lives)
                     lives = totalSchiffe;
+                this.maxLives = lives;
                 
                 for (computerSpieler cs : this.spielers) {
                     cs.createGrid(gridGroße);
@@ -193,31 +207,34 @@ public class Uebung_Schiffe_Versenken {
         }
         
         public void start(){
-            passiveSpieler = 1;
-            activSpieler   = 0;
+            passivSpieler = 1;
+            aktivSpieler   = 0;
             int temp = 0;
             do{
-                System.out.println("Spieler in Turn:"+activSpieler);
-                coordenate2D co = this.spielers.get(activSpieler).tippen();
-                System.out.println("Trying at:"+"( "+co.x+" , "+co.y+" )");
-                gameEnded = this.spielers.get(passiveSpieler).tippPruefen(co);
+                //der aktive Spieler shieß
+                System.out.println("Spieler in Turn:"+aktivSpieler);
+                coordenate2D co = this.spielers.get(aktivSpieler).tippen();
+                System.out.println("Firing at:"+"( "+co.x+" , "+co.y+" )");
+
+                //der pasive Spieler überpruft ob ein von seinen Schiff angeschossen wurde
+                gameEnded = this.spielers.get(passivSpieler).tippPruefen(co);
                 if(gameEnded)
-                    System.out.println("Spieler "+activSpieler+" gewonnen");
+                    System.out.println("Spieler "+aktivSpieler+" gewonnen");
                 else{
                 //change the order
-                    temp = passiveSpieler;
-                    passiveSpieler = activSpieler;
-                    activSpieler = temp;
+                    temp = passivSpieler;
+                    passivSpieler = aktivSpieler;
+                    aktivSpieler = temp;
                 }
                 //s.nextLine();
             }while(!this.gameEnded);
 
         }
         public void showScores(){
-            System.out.println("Spieler: "+activSpieler+" hat gewonnen");
-            System.out.println("Final score: Spieler´s "+activSpieler+"  Punkte: "+this.maxLives);
-            System.out.println("Final score: Spieler´s "+passiveSpieler+
-                                "  Punkte: "+(this.maxLives-this.spielers.get(activSpieler).getLives()) );
+            System.out.println("Spieler: "+aktivSpieler+" hat gewonnen");
+            System.out.println("Final score: Spieler´s "+aktivSpieler+"  Punkte: "+this.maxLives);
+            System.out.println("Final score: Spieler´s "+passivSpieler+
+                                "  Punkte: "+(this.maxLives-this.spielers.get(aktivSpieler).getLives()) );
         }
     }
 
@@ -229,10 +246,10 @@ public class Uebung_Schiffe_Versenken {
 
     public Uebung_Schiffe_Versenken(){
         mySpielManager = new spielManager();
-        mySpielManager.createGame(6,5,10);
     }
     public static void main(String[] args) {
         Uebung_Schiffe_Versenken myGame = new Uebung_Schiffe_Versenken();
+        myGame.mySpielManager.createGame(3,3,3);
         myGame.mySpielManager.start();
         myGame.mySpielManager.showScores();
         
