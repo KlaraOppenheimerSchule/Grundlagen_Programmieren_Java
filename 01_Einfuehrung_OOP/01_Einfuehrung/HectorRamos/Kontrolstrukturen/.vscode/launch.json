@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch system",
+            "request": "launch",
+            "mainClass": "system",
+            "projectName": "Kontrolstrukturen_fcdfebf4"
+        },
+        {
+            "type": "java",
+            "name": "Launch password",
+            "request": "launch",
+            "mainClass": "password",
+            "projectName": "Kontrolstrukturen_fcdfebf4"
+        },
+        {
+            "type": "java",
             "name": "Launch Uebung_Schiffe_Versenken",
             "request": "launch",
             "mainClass": "Uebung_Schiffe_Versenken",
