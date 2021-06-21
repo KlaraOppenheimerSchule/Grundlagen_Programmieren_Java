@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
-
 public class Uebung_Schiffe_Versenken {
     private spielManager mySpielManager;
 

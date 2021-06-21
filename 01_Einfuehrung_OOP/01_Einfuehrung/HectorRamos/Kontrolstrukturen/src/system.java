@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class system {
     //33 -> 47, 58 -> 64, 91 -> 96, 123 -> 126 Sonderzeichen
@@ -33,13 +34,14 @@ public class system {
 
     public char getRandomSondernZeichen(){
         Random random = new Random();
-        ArrayList<Integer> setSondernZeichen = sonderZeichenLimits.get(random.nextInt(4));
+        //Erzeugen des zufalligen Index von den vier Sondernzeichenssegmenten 
+        ArrayList<Integer> setSondernZeichen = sonderZeichenLimits.get(random.nextInt(sonderZeichenLimits.size()));
         int randomNumber = setSondernZeichen.get(random.nextInt(setSondernZeichen.size()));
         return (char)(randomNumber);
     }
     public system(){
         sonderZeichenLimits = new ArrayList<ArrayList<Integer>>();
-
+        //Die Sonderzeichen werden in vier Segmenten unterteilt.
         ArrayList<Integer> temp = new ArrayList<Integer>();
         temp.add(33);
         temp.add(47);
@@ -62,7 +64,7 @@ public class system {
         String newPasswort = "";
 
         ArrayList<Integer> temp = new ArrayList<Integer>();
-        //Mindestens mussen jede Funktion mindestens einmal angeruft werden
+        //Mindestens muss jede Funktion mindestens einmal angeruft werden
         // großbuchstabe   klienbuchstabe   zeichen      ziffer
         temp.add(0);      temp.add(1);     temp.add(2);  temp.add(3);
 
@@ -91,7 +93,7 @@ public class system {
                     newPasswort=newPasswort.concat(String.valueOf(this.getRandomZiffer()));
                 break;
             }
-            //Entfernung des Indexes
+            //Entfernung des Indexes von der Funktion
             if(temp.size()>0)
                 temp.remove(choice);
         }
@@ -99,7 +101,18 @@ public class system {
     }
     public static void main(String[] args) {
         system myManager = new system();
-        System.out.println(myManager.erzeugNewPassword());
+        Scanner s = new Scanner(System.in);
+        boolean end = false;
+        String tempString;
+        do{
+            System.out.println("Neues Password:" + myManager.erzeugNewPassword());
+            System.out.println("neues?(yes), anderfalls tippen nein:");
+            tempString = s.nextLine();
+            if(!tempString.toUpperCase().equals("YES"))
+                end = true;
+        }while(end == false);
+
+
         
         //System.out.println("Ziffer:"+myManager.getRandomZiffer());
         //System.out.println("Großbuchstabe:"+myManager.getRandomGroßbuchstabe());

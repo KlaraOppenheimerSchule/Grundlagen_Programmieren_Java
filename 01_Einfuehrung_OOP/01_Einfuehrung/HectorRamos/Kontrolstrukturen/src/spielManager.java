@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class spielManager {
-    private Scanner s;
+        private Scanner s;
         private List<computerSpieler> spielers;
 
         private boolean gameEnded   = false;
