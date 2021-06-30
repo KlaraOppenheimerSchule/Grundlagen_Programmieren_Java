@@ -1,0 +1,13 @@
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\bin\Debug\netcoreapp3.1\ObserverPatternWetter.exe
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\bin\Debug\netcoreapp3.1\ObserverPatternWetter.deps.json
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\bin\Debug\netcoreapp3.1\ObserverPatternWetter.runtimeconfig.json
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\bin\Debug\netcoreapp3.1\ObserverPatternWetter.runtimeconfig.dev.json
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\bin\Debug\netcoreapp3.1\ObserverPatternWetter.dll
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\bin\Debug\netcoreapp3.1\ObserverPatternWetter.pdb
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.csproj.AssemblyReference.cache
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.AssemblyInfoInputs.cache
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.AssemblyInfo.cs
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.csproj.CoreCompileInputs.cache
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.dll
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.pdb
+C:\Users\hramo\source\repos\ObserverPatternWetter\ObserverPatternWetter\obj\Debug\netcoreapp3.1\ObserverPatternWetter.genruntimeconfig.cache

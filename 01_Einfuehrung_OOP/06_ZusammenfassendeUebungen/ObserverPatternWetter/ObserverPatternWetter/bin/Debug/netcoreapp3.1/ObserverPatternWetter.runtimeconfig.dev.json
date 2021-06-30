@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\hramo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\hramo\\.nuget\\packages"
+    ]
+  }
+}
