@@ -6,18 +6,30 @@ public class Program
 {
     public static void Main()
     {
-        WeatherSubscriber subscriber = new WeatherSubscriber();
-        WeatherProvider NDTVProvider = new WeatherProvider("NDTV");
-        NDTVProvider.Subscribe(subscriber);
-        WeatherProvider TimesProvider = new WeatherProvider("Times");
-        TimesProvider.Subscribe(subscriber);
-        WeatherProvider HeadLineProvider = new WeatherProvider("HeadLine");
-        HeadLineProvider.Subscribe(subscriber);
-        subscriber.SetMeasurements(new WeatherData(10, 7, 14));
-        HeadLineProvider.Unsubscribe();
-        subscriber.SetMeasurements(new WeatherData(28, 26, 14));
-        subscriber.SetMeasurements(null);
+        //subject
+        WeatherSubscriber DeutscherWetterdienst = new WeatherSubscriber();
+        //observers
+        WeatherProvider WebDienst = new WeatherProvider("WebDienst");
+        WebDienst.Subscribe(DeutscherWetterdienst);
+        WeatherProvider WetterApp = new WeatherProvider("WetterApp");
+        WetterApp.Subscribe(DeutscherWetterdienst);
+        WeatherProvider Tagesschau = new WeatherProvider("Tagesschau");
+        Tagesschau.Subscribe(DeutscherWetterdienst);
 
+        Console.WriteLine("Achtung! Der deutscher Wetterdienst hat neue Wetterdaten:");
+        DeutscherWetterdienst.SetMeasurements(new WeatherData(10, 7, 14));
+        Console.Read();
+
+        Tagesschau.Unsubscribe();
+        Console.WriteLine("Achtung! Die Tagesschau sucht sich ein anderen Wetterdienst.");
+        Console.Read();
+
+        Console.WriteLine("Achtung! Der deutscher Wetterdienst hat neue Wetterdaten:");
+        DeutscherWetterdienst.SetMeasurements(new WeatherData(28, 26, 14));
+        Console.Read();
+
+        Console.WriteLine("Fehler! Der deutscher Wetterdienst hat keine Wetterdaten");
+        DeutscherWetterdienst.SetMeasurements(null);
         Console.Read();
 
     }
