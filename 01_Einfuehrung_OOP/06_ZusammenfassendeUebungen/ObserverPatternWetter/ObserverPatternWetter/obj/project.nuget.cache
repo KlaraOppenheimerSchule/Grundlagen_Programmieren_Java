@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "txrr/BtMs082hlCKjHP7YJdWZABWNXiIOLVO+8+Iv4cprnaMecovH2VxTW58FGQ1KCx5BN5Xs/U3w5RxFsUNQA==",
+  "dgSpecHash": "ylHVa+DxyXcPLtxB5xYLx3knsRzuRbXcqUXuq72U2a/c5qUW9rutIozu7mMnwIHyw2BmlrE0rscVsgSa8tvW8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hramo\\source\\repos\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj",
+  "projectFilePath": "C:\\Users\\hramo\\Grundlagen_Programmieren_Java\\01_Einfuehrung_OOP\\06_ZusammenfassendeUebungen\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

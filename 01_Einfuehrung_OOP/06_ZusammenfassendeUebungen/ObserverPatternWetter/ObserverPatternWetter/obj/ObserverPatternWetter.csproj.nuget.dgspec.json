@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hramo\\source\\repos\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj": {}
+    "C:\\Users\\hramo\\Grundlagen_Programmieren_Java\\01_Einfuehrung_OOP\\06_ZusammenfassendeUebungen\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hramo\\source\\repos\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj": {
+    "C:\\Users\\hramo\\Grundlagen_Programmieren_Java\\01_Einfuehrung_OOP\\06_ZusammenfassendeUebungen\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hramo\\source\\repos\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj",
+        "projectUniqueName": "C:\\Users\\hramo\\Grundlagen_Programmieren_Java\\01_Einfuehrung_OOP\\06_ZusammenfassendeUebungen\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj",
         "projectName": "ObserverPatternWetter",
-        "projectPath": "C:\\Users\\hramo\\source\\repos\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj",
+        "projectPath": "C:\\Users\\hramo\\Grundlagen_Programmieren_Java\\01_Einfuehrung_OOP\\06_ZusammenfassendeUebungen\\ObserverPatternWetter\\ObserverPatternWetter\\ObserverPatternWetter.csproj",
         "packagesPath": "C:\\Users\\hramo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hramo\\source\\repos\\ObserverPatternWetter\\ObserverPatternWetter\\obj\\",
+        "outputPath": "C:\\Users\\hramo\\Grundlagen_Programmieren_Java\\01_Einfuehrung_OOP\\06_ZusammenfassendeUebungen\\ObserverPatternWetter\\ObserverPatternWetter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hramo\\AppData\\Roaming\\NuGet\\NuGet.Config",
