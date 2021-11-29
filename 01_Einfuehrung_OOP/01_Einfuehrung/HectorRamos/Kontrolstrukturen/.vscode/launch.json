@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch noten",
+            "request": "launch",
+            "mainClass": "noten",
+            "projectName": "Kontrolstrukturen_fcdfebf4"
+        },
+        {
+            "type": "java",
             "name": "Launch system",
             "request": "launch",
             "mainClass": "system",

@@ -20,8 +20,8 @@ public class Program
         DeutscherWetterdienst.SetMeasurements(new WeatherData(10, 7, 14));
         Console.Read();
 
-        Console.WriteLine("Achtung! Die Tagesschau sucht sich ein anderen Wetterdienst.");
         Tagesschau.Unsubscribe();
+        Console.WriteLine("Achtung! Die Tagesschau sucht sich ein anderen Wetterdienst.");
         Console.Read();
 
         Console.WriteLine("Achtung! Der deutscher Wetterdienst hat neue Wetterdaten:");
